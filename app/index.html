@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GTA 6 Trophy Guide — All 55 PS5 Trophies</title>
-<meta name="description" content="The complete Grand Theft Auto VI trophy guide for PS5: all 55 trophies with official names, descriptions and grades, own-words unlock guides, and a checklist saved in your browser. Works offline.">
+<meta name="description" content="The complete Grand Theft Auto VI trophy guide for PS5: all 55 trophies with official names, descriptions and grades, own-words unlock guides, a platinum roadmap, and a checklist saved in your browser. Works offline.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
   <div class="wrap">
     <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
     <h1>GTA 6 Trophy Guide</h1>
-    <p class="sub">All 55 trophies — official names, descriptions and grades, a guide to each in our own words, and a checklist that stays saved in this browser. No online trophies. No account needed. Works offline.</p>
+    <p class="sub">All 55 trophies — official names, descriptions and grades, a guide to each in our own words, a roadmap to the platinum, and a checklist that stays saved in this browser. No online trophies. No account needed. Works offline.</p>
     <div class="progress" aria-label="Trophy progress">
       <div class="progress-row">
         <span id="progressText">0 / 55 earned</span>
@@ -24,8 +24,17 @@
       <label class="search-label" for="search">Search trophies</label>
       <input id="search" type="search" placeholder="Search by trophy name…" autocomplete="off">
       <button id="resetBtn" type="button" title="Clear every ticked trophy">Reset progress</button>
+      <button id="exportBtn" type="button" title="Download your earned trophies as a JSON file">Export checklist</button>
+      <button id="importBtn" type="button" title="Restore earned trophies from a JSON file you exported earlier">Import checklist</button>
+      <input id="importFile" type="file" accept=".json,application/json" hidden>
       <p class="count" id="shownCount"></p>
     </div>
+    <p id="importStatus" class="status" role="status" hidden></p>
+    <div class="filters" id="filterBar" role="group" aria-label="Filter trophies by kind"></div>
+    <label class="spoiler">
+      <input id="spoilerToggle" type="checkbox" checked>
+      <span><strong>Hide story spoilers.</strong> While this is on, the names, descriptions and guides of story trophies you have not earned yet stay hidden behind a placeholder — so mission names and the ending stay a surprise. Earned story trophies always show in full. Your choice is saved in this browser.</span>
+    </label>
   </div>
 </header>
 
@@ -34,16 +43,23 @@
     <h2>Before you start</h2>
     <ul>
       <li><strong>Keep manual saves.</strong> There is no mission replay and no New Game Plus. Save at the start of every chapter and once before the final mission.</li>
-      <li><strong>One trophy can be missed:</strong> Positive Mental Attitude needs Lucia&rsquo;s balcony meditation in Chapter 1. Do it before Chapter 1 ends.</li>
+      <li><strong>One trophy can be missed:</strong> Positive Mental Attitude needs Lucia&rsquo;s balcony meditation in Chapter 1. Do it before Chapter 1 ends — and keep a Chapter 1 save until the trophy pops, since no source has confirmed the trophy strictly needs that one spot.</li>
+      <li><strong>One race is time-sensitive:</strong> Race Against Yago in Chapter 3 (Yago&rsquo;s street racing strand) shows an hourglass icon — do it the moment it appears. It feeds Strangers &amp; Freaks, not its own trophy.</li>
       <li><strong>Cheats switch trophies off</strong> — and saving too. Keep cheats away from your trophy save.</li>
       <li><strong>Everything is single-player.</strong> All 55 trophies unlock offline; the 100% checklist appears under Progress &gt; Stats after the story, but earlier work still counts.</li>
     </ul>
   </section>
 
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-note">This order is this guide&rsquo;s suggestion, built from the official trophy descriptions and the cited guides — the game itself publishes no official roadmap. Story first, then collectibles, then the open-world cleanup, then 100% completion, and the platinum pops last.</p>
+    <ol id="roadmapList" class="roadmap-list"></ol>
+  </section>
+
   <section aria-label="Trophy list">
     <noscript><p class="empty">This guide needs JavaScript to load the trophy list from data/trophies.json.</p></noscript>
     <div id="list" class="list"><p class="loading">Loading the trophy list…</p></div>
-    <p id="empty" class="empty" hidden>No trophies match that search.</p>
+    <p id="empty" class="empty" hidden>No trophies match that search or filter.</p>
   </section>
 
   <section class="sources" aria-label="Sources">
@@ -53,12 +69,13 @@
       <li><a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6 — GTA 6 Trophies: All 55 trophies and Xbox achievements</a></li>
       <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List: All 55 Trophies and Achievements</a></li>
     </ul>
+    <p class="fine">Missable check, 19 November 2026: Output Lag lists exactly one missable trophy (Positive Mental Attitude); Planet GTA 6 says no reliable missable list exists yet. No other trophy is flagged missable in this guide.</p>
     <p class="fine">Unofficial fan guide. Not affiliated with Rockstar Games, Sony or PlayStation. Grand Theft Auto and GTA are trademarks of Take-Two Interactive.</p>
   </section>
 </main>
 
 <footer class="wrap fine">
-  <p>Progress is stored only in this browser (localStorage). Clearing browser data clears your checklist. Reset progress asks first, then clears every tick.</p>
+  <p>Progress is stored only in this browser (localStorage). Clearing browser data clears your checklist. Reset progress asks first, then clears every tick. Export downloads your earned trophies as JSON; import restores them from that file.</p>
 </footer>
 
 <script src="app.js"></script>

@@ -4,13 +4,14 @@
   "total": 55,
   "grades": { "platinum": 1, "gold": 2, "silver": 6, "bronze": 46 },
   "hidden_count": 28,
+  "missable_count": 1,
   "visible_count": 27,
   "online_trophies": 0,
   "notes": [
     "Names, descriptions and grades are the official English text as shown on PlayStation Network, taken 18 Nov 2026 from Exophase and cross-checked with PSNProfiles and TrueAchievements (see sources). Two independent guides agree on all 55 entries.",
     "Guides are written in our own words for this entry. Where a source has not confirmed an unlock method, the guide says so and the trophy carries guide_unconfirmed: true — no method is invented.",
     "Cheats disable trophies and saving. There is no mission replay and no New Game Plus, so keep a manual save at the start of every chapter and one before the final mission.",
-    "The only trophy reported as possibly missable is Positive Mental Attitude (Lucia's Chapter 1 balcony meditation)."
+    "Missable pass, Session B 19 Nov 2026: Output Lag lists exactly 1 missable trophy — Positive Mental Attitude (Lucia's Chapter 1 balcony meditation, gone once Chapter 1 ends; Output Lag notes it is not confirmed the trophy strictly needs that one spot). Planet GTA 6 says no reliable missable list exists yet. No other trophy is flagged missable."
   ],
   "sources": {
     "planetgta6": {
@@ -198,7 +199,7 @@
       "kind": "misc",
       "hidden": false,
       "missable": false,
-      "guide": "Try each type of activity once — nine types in total. Sample one of everything the world offers rather than grinding a single activity.",
+      "guide": "Try each type of activity once — sample one of everything the world offers rather than grinding a single activity, and the trophy pops.",
       "sources": ["planetgta6", "outputlag"]
     },
     {
@@ -242,7 +243,7 @@
       "kind": "misc",
       "hidden": false,
       "missable": false,
-      "guide": "Beat Cal in a fishing challenge. Find Cal's fishing challenge and out-fish him.",
+      "guide": "Beat Cal in a fishing challenge. Find Cal's fishing challenge, take him on, and out-fish him — the trophy pops when you win.",
       "sources": ["planetgta6", "outputlag"]
     },
     {
@@ -330,7 +331,7 @@
       "kind": "collectible",
       "hidden": false,
       "missable": true,
-      "guide": "Meditate at every spot across Leonida; spots show as purple icons when you are close. Do Lucia's balcony meditation in Chapter 1 — after the mission Down to Earth, follow her to the balcony of Jason's house in the morning — because it disappears once Chapter 1 ends. Meditating with your partner at outdoor spots should count for both characters.",
+      "guide": "Meditate at every spot across Leonida; spots show as purple icons when you are close. Do Lucia's balcony meditation in Chapter 1 — after the mission Down to Earth, follow her to the balcony of Jason's house in the morning — because it disappears once Chapter 1 ends. It is not confirmed that Positive Mental Attitude strictly needs that one spot, so do it anyway and keep a Chapter 1 save until the trophy pops. Meditating with your partner at outdoor spots should count for both characters.",
       "sources": ["planetgta6", "outputlag"]
     },
     {
@@ -352,7 +353,7 @@
       "kind": "collectible",
       "hidden": false,
       "missable": false,
-      "guide": "Complete 3 Collectible Card sets. Collect cards around Leonida until three full sets are done.",
+      "guide": "Complete 3 Collectible Card sets. Cards are scattered around Leonida — keep collecting and check your sets as you go until three full sets are done.",
       "sources": ["planetgta6", "outputlag"]
     },
     {
@@ -484,7 +485,7 @@
       "kind": "collectible",
       "hidden": false,
       "missable": false,
-      "guide": "Explore all of Leonida. Cover every region of the map until the whole state is revealed.",
+      "guide": "Explore all of Leonida. Travel the whole state until every region of the map is revealed and the trophy pops.",
       "sources": ["planetgta6", "outputlag"]
     },
     {
@@ -589,7 +590,8 @@
       "kind": "combat",
       "hidden": true,
       "missable": false,
-      "guide": "Bowl enemies over with a melee drive-by: strike people with a melee weapon from a moving vehicle. The description itself names the method.",
+      "guide": "The description points to bowling enemies over with a melee drive-by — striking people with a melee weapon from a moving vehicle — but no source has confirmed the exact trigger yet, so treat any claimed method as unconfirmed.",
+      "guide_unconfirmed": true,
       "sources": ["planetgta6", "outputlag"]
     },
     {
@@ -611,7 +613,7 @@
       "kind": "misc",
       "hidden": false,
       "missable": false,
-      "guide": "Spend $100,000 across all shops. The total is cumulative across every kind of shop.",
+      "guide": "Spend $100,000 across all shops. The total is cumulative across every kind of shop, so it builds up through normal play and big purchases alike.",
       "sources": ["planetgta6", "outputlag"]
     },
     {

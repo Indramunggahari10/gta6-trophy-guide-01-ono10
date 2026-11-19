@@ -12,8 +12,13 @@ The complete trophy guide for **Grand Theft Auto VI** on PlayStation 5: all **55
 
 - **All 55 trophies**, rendered from `app/data/trophies.json` (names, descriptions and grades are the official English text as shown on PlayStation Network).
 - **Checklist with saved progress**: tick a trophy off and it stays ticked — progress is stored in `localStorage`, with a progress bar and a platinum counter (earned out of the 54 non-platinum trophies). A Reset progress button clears it (it asks first).
-- **Search by trophy name**, grade and kind shown on every card (story, collectible, combat, driving, misc), hidden and missable flags.
-- **Honest about the unknown**: 6 trophies whose unlock method no trusted source has confirmed yet are flagged "Method unconfirmed" instead of guessing.
+- **Search by trophy name or description**, grade and kind shown on every card (story, collectible, combat, driving, misc), hidden and missable flags.
+- **Kind filters with counts**: All, Story, Collectibles, Combat, Driving, Misc, Missable, and Online (0 — the game has no online trophies).
+- **Spoiler setting (on by default)**: hides the names, descriptions and guides of story trophies you have not earned yet, behind a placeholder; earned story trophies always show in full. The choice is saved in `localStorage`.
+- **Export / import checklist**: export downloads your earned trophies as JSON; import restores them, ignoring unknown ids and reporting how many were restored.
+- **Platinum roadmap**: six stages built from the trophy data — story, collectibles, combat and driving, world and money cleanup, 100% completion, then the platinum — with per-stage earned counts.
+- **Honest about the unknown**: 7 trophies whose unlock method no trusted source has confirmed yet are flagged "Method unconfirmed" instead of guessing.
+- **Missable check (19 Nov 2026)**: Output Lag lists exactly one missable trophy — Positive Mental Attitude, Lucia's Chapter 1 balcony meditation. Planet GTA 6 says no reliable missable list exists yet.
 - **Works offline**: plain static files under `app/`, no build step, no network requests at run time.
 
 ## How to run it
@@ -38,6 +43,9 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 | `app/index.html`, `app/style.css`, `app/app.js` | The guide itself (static, offline) |
 | `app/data/trophies.json` | All 55 trophies with guides and per-trophy sources |
 | `screenshots/1-checklist.jpg` | Smoke-test screenshot of the guide (1280×720) |
+| `screenshots/2-filters.jpg` | Kind-filter view: Collectibles filter active (1280×720) |
+| `screenshots/3-spoiler.jpg` | Spoiler-on view: story trophies hidden until earned (1280×720) |
+| `screenshots/4-roadmap.jpg` | Platinum roadmap view (1280×720) |
 | `shots.json` | What each screenshot shows |
 | `.makefun/owner.json` | Competition owner record |
 
