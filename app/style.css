@@ -1,0 +1,97 @@
+/* GTA 6 Trophy Guide — original look, no game artwork. Deep dusk purple with
+   a warm neon accent. Plain CSS, no frameworks, no network requests. */
+:root {
+  --bg: #14101f;
+  --panel: #1e1830;
+  --panel-2: #262040;
+  --line: #3a2f5e;
+  --text: #f2eefb;
+  --muted: #b7abd4;
+  --accent: #ff5e8a;
+  --accent-2: #37e0c8;
+  --gold: #f5c542;
+  --silver: #cfd6e4;
+  --bronze: #d08a4e;
+  --platinum: #8fe3ff;
+  --radius: 12px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.top {
+  padding: 36px 0 24px;
+  background: linear-gradient(160deg, #2b1150 0%, #14101f 62%);
+  border-bottom: 1px solid var(--line);
+}
+.kicker { margin: 0 0 6px; color: var(--accent-2); letter-spacing: .14em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; }
+.sub { margin: 0 0 20px; color: var(--muted); max-width: 640px; }
+.progress-row { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; }
+.bar { height: 12px; margin-top: 8px; background: #0d0a18; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--gold)); transition: width .25s ease; }
+.controls { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.search-label { font-weight: 700; }
+#search {
+  flex: 1 1 280px; padding: 10px 14px; font: inherit; color: var(--text);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 999px; outline: none;
+}
+#search:focus { border-color: var(--accent-2); }
+#resetBtn {
+  padding: 10px 16px; font: inherit; font-weight: 700; cursor: pointer;
+  color: var(--text); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px;
+}
+#resetBtn:hover { border-color: var(--accent); color: var(--accent); }
+.count { margin: 0; color: var(--muted); }
+main { padding: 24px 0 8px; }
+.notes {
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 18px 22px; margin-bottom: 24px;
+}
+.notes h2, .sources h2 { margin: 0 0 8px; font-size: 20px; }
+.notes ul { margin: 0; padding-left: 20px; }
+.notes li { margin: 6px 0; }
+.notes li::marker { color: var(--accent); }
+.list { display: grid; gap: 12px; }
+.card {
+  display: grid; grid-template-columns: auto 1fr; gap: 6px 14px;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 16px 18px;
+}
+.card.earned { border-color: var(--accent-2); background: var(--panel-2); }
+.card input[type="checkbox"] { width: 22px; height: 22px; margin-top: 4px; accent-color: var(--accent-2); cursor: pointer; }
+.card h3 { margin: 0; font-size: 19px; }
+.card h3 .num { color: var(--muted); font-weight: 600; margin-right: 6px; }
+.desc { margin: 2px 0 6px; color: var(--muted); font-style: italic; }
+.guide { margin: 0 0 8px; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.tag {
+  display: inline-block; padding: 2px 10px; border-radius: 999px;
+  border: 1px solid var(--line); font-size: 12px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .06em; color: var(--muted);
+}
+.tag.platinum { color: var(--platinum); border-color: var(--platinum); }
+.tag.gold { color: var(--gold); border-color: var(--gold); }
+.tag.silver { color: var(--silver); border-color: var(--silver); }
+.tag.bronze { color: var(--bronze); border-color: var(--bronze); }
+.tag.missable { color: #fff; background: #a31f3d; border-color: #a31f3d; }
+.tag.unconfirmed { color: var(--gold); border-color: var(--gold); }
+.tag.hidden { color: var(--muted); }
+.src { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+.src a { color: var(--accent-2); }
+.empty, .loading { color: var(--muted); text-align: center; padding: 32px 0; }
+.sources { margin: 32px 0; }
+.sources a { color: var(--accent-2); }
+.sources ul { padding-left: 20px; }
+.fine { color: var(--muted); font-size: 13px; }
+footer { padding-bottom: 32px; }
+@media (max-width: 640px) {
+  h1 { font-size: 30px; }
+  .card { padding: 14px; }
+  .progress-row { flex-direction: column; gap: 2px; }
+}
